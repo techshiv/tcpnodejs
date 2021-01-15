@@ -20,6 +20,7 @@ function callback_server_connection(socket){
     
     socket.on('data', function (data) {
         console.log(data.toString());
+         socket.send("you sent"+data.toString())
     });
     
     socket.on('end', function () {
